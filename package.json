@@ -1,0 +1,61 @@
+{
+  "name": "napi-clipboard-windows",
+  "version": "1.0.0",
+  "description": "Native Node.js addon for Windows clipboard operations using NAPI with clean architecture separating Win32 APIs from Node.js bindings",
+  "main": "index.js",
+  "scripts": {
+    "build": "yarn node-gyp rebuild",
+    "clean": "yarn node-gyp clean", 
+    "test": "node test.js",
+    "example": "node example.js",
+    "demo:architecture": "node architecture-demo.js",
+    "prepublishOnly": "yarn build",
+    "install": "yarn build"
+  },
+  "keywords": [
+    "napi", 
+    "native", 
+    "addon", 
+    "windows", 
+    "clipboard", 
+    "win32", 
+    "c++", 
+    "node-addon-api",
+    "text",
+    "copy",
+    "paste",
+    "unicode"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/napi-clipboard-windows.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/napi-clipboard-windows/issues"
+  },
+  "homepage": "https://github.com/yourusername/napi-clipboard-windows#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "os": ["win32"],
+  "cpu": ["x64", "ia32"],
+  "dependencies": {
+    "node-addon-api": "^7.0.0"
+  },
+  "devDependencies": {
+    "node-gyp": "^10.0.0"
+  },
+  "gypfile": true,
+  "files": [
+    "index.js",
+    "src/",
+    "binding.gyp",
+    "LICENSE",
+    "README.md"
+  ]
+}
